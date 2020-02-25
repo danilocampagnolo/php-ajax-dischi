@@ -13,7 +13,7 @@
   <body>
     <header>
       <div class="wrapper">
-        <img src="https://media.ilsoftware.it/images/500x500/img_19519.jpg" alt="">
+        <a href="#"><img src="https://media.ilsoftware.it/images/500x500/img_19519.jpg" alt=""></a>
       </div>
     </header>
     <main>
@@ -32,9 +32,5 @@
         </div>
       </div>
     </main>
-
-
-
-
   </body>
 </html>
