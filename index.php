@@ -6,6 +6,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/app.css">
     <title></title>
   </head>
@@ -22,9 +23,9 @@
             <div class="disk">
               <ul>
                 <li> <img src="<?php echo $value["poster"] ?>" alt=""> </li>
-                <li> Title: <?php echo $value["title"] ?> </li>
-                <li> Author: <?php echo $value["author"] ?> </li>
-                <li> Year: <?php echo $value["year"] ?> </li>
+                <li> <h3><?php echo $value["title"] ?></h3>  </li>
+                <li class="author"> <?php echo $value["author"] ?> </li>
+                <li> <?php echo $value["year"] ?> </li>
               </ul>
             </div>
           <?php endforeach; ?>

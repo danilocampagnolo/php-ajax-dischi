@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .wrapper {
   width: 65%;
   margin: auto;
@@ -42,13 +46,22 @@ main .disks .disk {
 
 main .disks .disk ul {
   width: 215px;
-  height: 290px;
-  padding: 15px;
+  height: 320px;
+  padding: 20px;
   margin-bottom: 20px;
   background: #000000;
 }
 
+main .disks .disk ul li h3 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
 main .disks .disk ul li img {
   width: 170px;
+}
+
+main .disks .disk ul .author {
+  color: #858585;
 }
 
