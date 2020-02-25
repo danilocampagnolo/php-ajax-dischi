@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 75%;
+  margin: auto;
+}
+li {
+  list-style: none;
+}
+
+header {
+  height: 50px;
+  background: #000000;
+}
+
+main {
+  background: #191919;
+  .disks {
+    display: flex;
+    flex-wrap: wrap;
+    .disk {
+      background: #000000;
+      text-align: center;
+    }
+  }
+}
