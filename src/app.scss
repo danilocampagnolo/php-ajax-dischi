@@ -12,8 +12,13 @@ li {
 }
 
 header {
-  height: 50px;
+  height: 70px;
+  line-height: 70px;
   background: #000000;
+  img {
+    height: 60px;
+    vertical-align: middle;
+  }
 }
 
 main {

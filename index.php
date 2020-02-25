@@ -12,6 +12,7 @@
   <body>
     <header>
       <div class="wrapper">
+        <img src="https://media.ilsoftware.it/images/500x500/img_19519.jpg" alt="">
       </div>
     </header>
     <main>
