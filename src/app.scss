@@ -29,6 +29,10 @@ main {
     .disk {
       background: #000000;
       text-align: center;
+      color: #fff;
+      img {
+        width: 200px;
+      }
     }
   }
 }

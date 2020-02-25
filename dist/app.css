@@ -36,5 +36,10 @@ main .disks {
 main .disks .disk {
   background: #000000;
   text-align: center;
+  color: #fff;
+}
+
+main .disks .disk img {
+  width: 200px;
 }
 
