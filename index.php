@@ -19,12 +19,14 @@
       <div class="wrapper">
         <div class="disks">
           <?php foreach ($database as $value): ?>
-            <ul class="disk">
-              <li> <img src="<?php echo $value["poster"] ?>" alt=""> </li>
-              <li> Title: <?php echo $value["title"] ?> </li>
-              <li> Author: <?php echo $value["author"] ?> </li>
-              <li> Year: <?php echo $value["year"] ?> </li>
-            </ul>
+            <div class="disk">
+              <ul>
+                <li> <img src="<?php echo $value["poster"] ?>" alt=""> </li>
+                <li> Title: <?php echo $value["title"] ?> </li>
+                <li> Author: <?php echo $value["author"] ?> </li>
+                <li> Year: <?php echo $value["year"] ?> </li>
+              </ul>
+            </div>
           <?php endforeach; ?>
         </div>
       </div>

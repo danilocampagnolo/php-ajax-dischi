@@ -5,7 +5,7 @@
 }
 
 .wrapper {
-  width: 75%;
+  width: 65%;
   margin: auto;
 }
 
@@ -25,6 +25,7 @@ header img {
 }
 
 main {
+  padding-top: 100px;
   background: #191919;
 }
 
@@ -34,12 +35,20 @@ main .disks {
 }
 
 main .disks .disk {
-  background: #000000;
+  width: calc(100% / 3);
   text-align: center;
   color: #fff;
 }
 
-main .disks .disk img {
-  width: 200px;
+main .disks .disk ul {
+  width: 215px;
+  height: 290px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: #000000;
+}
+
+main .disks .disk ul li img {
+  width: 170px;
 }
 
