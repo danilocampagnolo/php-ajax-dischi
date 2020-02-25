@@ -11,14 +11,13 @@
   <body>
     <ul>
       <?php foreach ($database as $key => $value): ?>
-        <li>
-          <ul>
-            <li> <?php echo $value["title"] ?> </li>
-            <li> <?php echo $value["author"] ?> </li>
-            <li> <?php echo $value["year"] ?> </li>
-            <li> <?php echo $value["poster"] ?> </li>
-          </ul>
-        </li>
+      <li> Title: <?php echo $value["title"] ?> </li>
+        <ul>
+          <li> Author: <?php echo $value["author"] ?> </li>
+          <li> Year: <?php echo $value["year"] ?> </li>
+          <li><img src="<?php echo $value["poster"] ?>" alt=""> </li>
+        </ul>
+      </li>
       <?php endforeach; ?>
     </ul>
 
