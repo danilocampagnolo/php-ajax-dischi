@@ -10,7 +10,7 @@
   </head>
   <body>
     <ul>
-      <?php foreach ($database as $key => $value): ?>
+      <?php foreach ($database as $value): ?>
       <li> Title: <?php echo $value["title"] ?> </li>
         <ul>
           <li> Author: <?php echo $value["author"] ?> </li>
