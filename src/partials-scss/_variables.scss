@@ -2,5 +2,6 @@ $fontFamily : 'Roboto', sans-serif;
 
 $primaryBlack : #000000;
 $primaryGrey : #191919;
+$secondaryGrey : lighten($primaryGrey, 30);
 
 $widthWrapper : 65%;
