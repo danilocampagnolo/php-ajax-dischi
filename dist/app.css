@@ -45,8 +45,8 @@ main .disks .disk {
 }
 
 main .disks .disk ul {
-  width: 215px;
-  height: 320px;
+  width: 80%;
+  height: 95%;
   padding: 20px;
   margin-bottom: 20px;
   background: #000000;
@@ -63,6 +63,6 @@ main .disks .disk ul li img {
 }
 
 main .disks .disk ul .author {
-  color: #858585;
+  color: #191919;
 }
 
