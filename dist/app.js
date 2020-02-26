@@ -15818,6 +15818,28 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 var Handlebars = __webpack_require__(/*! handlebars */ "./node_modules/handlebars/dist/cjs/handlebars.js");
 
 $(document).ready(function () {
+  $("select").change(function () {
+    var value = $(this).val();
+    $.ajax({
+      url: "http://localhost:8888/php-ajax-dischi/server.php",
+      method: "GET",
+      data: {
+        author: value
+      },
+      success: function success(array) {
+        for (var i = 0; i < array.length; i++) {
+          if (array[i].author == value) {
+            $(".disks").text("");
+            printResult(array[i]);
+            console.log(array[i]);
+          }
+        }
+      },
+      error: function error(errore) {
+        console.log(errore);
+      }
+    });
+  });
   $.ajax({
     url: "http://localhost:8888/php-ajax-dischi/server.php",
     method: "GET",
@@ -15828,7 +15850,7 @@ $(document).ready(function () {
       console.log(errore);
     }
   });
-});
+}); // ================ FUNCTIONS
 
 function printResult(array) {
   var source = document.getElementById("entry-template").innerHTML;
