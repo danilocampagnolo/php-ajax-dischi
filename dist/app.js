@@ -15815,7 +15815,15 @@ module.exports = g;
 
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
-var Handlebars = __webpack_require__(/*! handlebars */ "./node_modules/handlebars/dist/cjs/handlebars.js");
+var Handlebars = __webpack_require__(/*! handlebars */ "./node_modules/handlebars/dist/cjs/handlebars.js"); // var source = document.getElementById("entry-template").innerHTML;
+// var template = Handlebars.compile(source);
+//
+// var context = {
+//   title: "ciao",
+// };
+// var html = template(context);
+// $(".disks").append(html);
+// fare chiamata ajax
 
 /***/ }),
 

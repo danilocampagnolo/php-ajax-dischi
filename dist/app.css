@@ -58,7 +58,8 @@ main .disks .disk ul li h3 {
 }
 
 main .disks .disk ul li img {
-  width: 170px;
+  width: 100%;
+  margin: auto;
 }
 
 main .disks .disk ul .author {
