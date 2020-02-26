@@ -15827,13 +15827,8 @@ $(document).ready(function () {
         author: value
       },
       success: function success(array) {
-        for (var i = 0; i < array.length; i++) {
-          if (array[i].author == value) {
-            $(".disks").text("");
-            printResult(array[i]);
-            console.log(array[i]);
-          }
-        }
+        $(".disks").text("");
+        printResult(array);
       },
       error: function error(errore) {
         console.log(errore);
