@@ -15815,7 +15815,20 @@ module.exports = g;
 
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
-var Handlebars = __webpack_require__(/*! handlebars */ "./node_modules/handlebars/dist/cjs/handlebars.js"); // var source = document.getElementById("entry-template").innerHTML;
+var Handlebars = __webpack_require__(/*! handlebars */ "./node_modules/handlebars/dist/cjs/handlebars.js");
+
+$(document).ready(function () {
+  $.ajax({
+    url: "http://localhost:8888/php-ajax-dischi/server.php",
+    method: "GET",
+    success: function success(data) {
+      console.log(data);
+    },
+    error: function error(errore) {
+      alert("È avvenuto un errore. " + errore);
+    }
+  });
+}); // var source = document.getElementById("entry-template").innerHTML;
 // var template = Handlebars.compile(source);
 //
 // var context = {
