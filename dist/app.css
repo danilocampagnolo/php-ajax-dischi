@@ -31,6 +31,7 @@ header img {
 main {
   padding: 100px 0;
   background: #191919;
+  min-height: calc(100vh - 70px);
 }
 
 main .disks {

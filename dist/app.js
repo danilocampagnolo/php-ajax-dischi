@@ -15818,6 +15818,17 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 var Handlebars = __webpack_require__(/*! handlebars */ "./node_modules/handlebars/dist/cjs/handlebars.js");
 
 $(document).ready(function () {
+  $.ajax({
+    url: "http://localhost:8888/php-ajax-dischi/server.php",
+    method: "GET",
+    success: function success(array) {
+      authorInSelect(array);
+      printResult(array);
+    },
+    error: function error(errore) {
+      console.log(errore);
+    }
+  });
   $("select").change(function () {
     var value = $(this).val();
     $.ajax({
@@ -15835,16 +15846,6 @@ $(document).ready(function () {
       }
     });
   });
-  $.ajax({
-    url: "http://localhost:8888/php-ajax-dischi/server.php",
-    method: "GET",
-    success: function success(array) {
-      printResult(array);
-    },
-    error: function error(errore) {
-      console.log(errore);
-    }
-  });
 }); // ================ FUNCTIONS
 
 function printResult(array) {
@@ -15861,6 +15862,21 @@ function printResult(array) {
     var html = template(context);
     $(".disks").append(html);
   }
+}
+
+function authorInSelect() {
+  $.ajax({
+    url: "http://localhost:8888/php-ajax-dischi/server.php",
+    success: function success(array) {
+      array.forEach(function (array) {
+        console.log(array);
+        $('select').append('<option>' + array.author + '</option>');
+      });
+    },
+    error: function error(richiesta, stato, errore) {
+      $('main').append("<li>È avvenuto un errore. " + errore + "</li>");
+    }
+  });
 }
 
 /***/ }),

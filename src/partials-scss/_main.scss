@@ -1,6 +1,7 @@
 main {
   padding: 100px 0;
   background: $primaryGrey;
+  min-height: calc(100vh - 70px);
   .disks {
     display: flex;
     flex-wrap: wrap;

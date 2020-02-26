@@ -3,6 +3,20 @@ const Handlebars = require('handlebars');
 
 $(document).ready(function() {
 
+  $.ajax(
+    {
+      url: "http://localhost:8888/php-ajax-dischi/server.php",
+      method: "GET",
+      success: function(array) {
+        authorInSelect(array);
+        printResult(array);
+      },
+      error: function(errore) {
+        console.log(errore);
+      }
+    }
+  );
+
   $("select").change(function() {
     var value = $(this).val();
     $.ajax(
@@ -22,19 +36,6 @@ $(document).ready(function() {
       }
     );
   });
-
-  $.ajax(
-    {
-      url: "http://localhost:8888/php-ajax-dischi/server.php",
-      method: "GET",
-      success: function(array) {
-        printResult(array);
-      },
-      error: function(errore) {
-        console.log(errore);
-      }
-    }
-  );
 });
 
 // ================ FUNCTIONS
@@ -52,4 +53,19 @@ function printResult(array) {
     var html = template(context);
     $(".disks").append(html);
   }
+}
+
+function authorInSelect() {
+  $.ajax({
+    url: "http://localhost:8888/php-ajax-dischi/server.php",
+    success: function (array) {
+      array.forEach(function(array) {
+        console.log(array);
+        $('select').append('<option>' + array.author + '</option>')
+      });
+    },
+    error: function (richiesta, stato, errore) {
+      $('main').append("<li>È avvenuto un errore. " + errore + "</li>");
+    }
+  });
 }
