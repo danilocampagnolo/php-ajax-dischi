@@ -64,8 +64,8 @@ function authorInSelect() {
         $('select').append('<option>' + array.author + '</option>')
       });
     },
-    error: function (richiesta, stato, errore) {
-      $('main').append("<li>È avvenuto un errore. " + errore + "</li>");
+    error: function (errore) {
+      console.log(errore);
     }
   });
 }

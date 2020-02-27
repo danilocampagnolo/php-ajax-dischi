@@ -15873,8 +15873,8 @@ function authorInSelect() {
         $('select').append('<option>' + array.author + '</option>');
       });
     },
-    error: function error(richiesta, stato, errore) {
-      $('main').append("<li>È avvenuto un errore. " + errore + "</li>");
+    error: function error(errore) {
+      console.log(errore);
     }
   });
 }
